@@ -1,5 +1,5 @@
 {
-  "name": "whodoyouthinkvr",
+  "name": "vrthechampions",
   "version": "1.0.0",
   "description": "WebVR API Playground",
   "main": "index.js",
@@ -12,16 +12,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jpedroribeiro/WhoDoYouThinkVR.git"
+    "url": "git+https://github.com/jpedroribeiro/VRTheChampions.git"
   },
   "keywords": [
     "webvr",
-    "vr"
+    "vr",
+    "aframe"
   ],
   "author": "J. Pedro Ribeiro",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jpedroribeiro/WhoDoYouThinkVR/issues"
+    "url": "https://github.com/jpedroribeiro/VRTheChampions/issues"
   },
-  "homepage": "https://github.com/jpedroribeiro/WhoDoYouThinkVR#readme"
+  "homepage": "https://github.com/jpedroribeiro/VRTheChampions#readme"
 }

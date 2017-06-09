@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Development Version, Uncompressed with Source Maps -->
+        <script src="/node_modules/aframe/dist/aframe-master.js"></script>
+    </head>
+
+    <body>
+        <a-scene>
+            <a-sky color="#333333"></a-sky>
+
+            <a-entity position="0 0 0" rotation="0 0 0" scale="5 5 5">
+                <a-plane color="#a84168" height="4" width="4" position="0 0 0" rotation="-90 0 0"></a-plane><!--floor-->
+                <a-plane color="#ffffff" height="4" width="4" position="0 2 0" rotation="90 0 0"></a-plane><!--ceiling-->
+                <a-plane color="#6a41a8" height="2" width="4" position="0 1 -2" rotation="0 0 0"></a-plane><!--wall-north-->
+                <a-plane color="#6a41a8" height="2" width="4" position="0 1 2" rotation="0 180 0"></a-plane><!--wall-south-->
+                <a-plane color="#6a41a8" height="2" width="4" position="-2 1 0" rotation="0 90 0"></a-plane><!--wall-west-->
+                <a-plane color="#6a41a8" height="2" width="4" position="2 1 0" rotation="0 -90 0"></a-plane><!--wall-east-->
+            </a-entity>
+
+
+            <a-obj-model position="0 0 -5" src="monster-ghost.obj" mtl="monster-ghost.mtl">
+                <a-animation attribute="rotation" from="-90 0 0" to="0 0 0" delay="500" dur="2000" fill="both" repeat="-1" easing="ease-out-bounce"></a-animation>
+            </a-obj-model><!--monster-->
+
+            <a-light type="point" intensity="2" distance="50" decay="2" position="0 8 -2"></a-light><!--light-source-->
+
+            <a-camera position="0 2 2" rotation="-45 0 0"></a-entity><!--camera-->
+        </a-scene>
+    </body>
+</html>
