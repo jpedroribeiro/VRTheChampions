@@ -5,7 +5,9 @@ import {
   Pano,
   Text,
   View,
-  StyleSheet
+  StyleSheet,
+  Model,
+  Scene
 } from 'react-vr';
 
 
@@ -49,18 +51,20 @@ class Block extends Component {
 class reactvr_hello_world extends Component {
   render() {
     return (
-      <View>
-        <Pano source={asset('chess-world.jpg')}/>
-        <View style={styles.block_one}>
-          <Block text='Hello world line 1' />
-          <Block text='Testing text' />
-        </View>
+      <Scene>
+        <View>
+          <Pano source={asset('chess-world.jpg')}/>
+          <View style={styles.block_one}>
+            <Block text='Hello world line 1' />
+            <Block text='Testing text' />
+          </View>
 
-        <View style={styles.block_two}>
-          <Block text='Hello world line 2' />
-          <Block text='Testing text 44' />
+          <View style={styles.block_two}>
+            <Block text='Hello world line 2' />
+            <Block text='Testing text 44' />
+          </View>
         </View>
-      </View>
+      </Scene>
     );
   }
 }
