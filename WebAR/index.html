@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<script src="/node_modules/aframe/dist/aframe-master.js"></script>
+<script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+
+<body>
+
+<!-- This whole scene will be controlled by the marker -->
+	<a-scene embedded artoolkit='sourceType: webcam;'>
+
+
+	<!-- Basically copy/paste from VR demo  with some minor tweaks to fit the screen-->
+		<a-assets>
+			<img id="boxTexture" src="/plastic.jpg">
+		</a-assets>		
+		<a-box src="#boxTexture" position="0 1 -5" rotation="0 45 45" scale="2 2 2">
+			<a-animation attribute="position" to="0 0.5 -0.5" direction="alternate" dur="2000" repeat="indefinite"></a-animation>
+			<a-animation attribute="scale" to="1.5 1.5 1.5" duration="300" direction="alternate" repeat="indefinite"></a-animation>
+		</a-box>
+
+		<a-text value="WebAR" color="#0000ff" position="-1 0 -2" scale="2 2 2"></a-text>
+
+		<a-light type="ambient" color="#FF0000"></a-light>
+		<a-light type="point" intensity="2" position="2 4 4"></a-light>
+	<!-- end copy/paste -->
+
+		<a-marker-camera preset='hiro'></a-marker-camera>
+	</a-scene>
+</body>
+</html>
