@@ -6,7 +6,9 @@
   "dependencies": {
     "aframe": "^0.5.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "serve": "^6.0.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
